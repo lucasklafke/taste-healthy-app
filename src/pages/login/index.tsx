@@ -18,8 +18,7 @@ export default function Login() {
       <div>
       <span className={styles.label}>Password</span>
       <form autoComplete='off'>
-
-        <input className={styles.input} placeholder='Digite sua senha' type='password'/>
+        <input className={styles.input} placeholder='Digite sua senha' type='password' autoComplete='off'/>
       </form>
       </div>
     </div>
