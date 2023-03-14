@@ -11,11 +11,16 @@ export default function Login() {
     <div className={styles.inputContainer}>
       <div>
         <span className={styles.label}>E-mail</span>
-        <div className={styles.input}>Digite seu e-mail</div>
+        <form autoComplete='off'>
+          <input className={styles.input} placeholder='Digite seu e-mail' type='email' autoComplete='off' />
+        </form>
       </div>
       <div>
       <span className={styles.label}>Password</span>
-      <div className={styles.input}>Digite sua senha</div>
+      <form autoComplete='off'>
+
+        <input className={styles.input} placeholder='Digite sua senha' type='password'/>
+      </form>
       </div>
     </div>
     <div className={styles.confirmContainer}>

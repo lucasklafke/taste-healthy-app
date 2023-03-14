@@ -28,8 +28,7 @@
   width: 350px;
   height: 56px;
 
-  /* principal */
-
+  border:none;
   background: #E9DAC4;
   border-radius: 5px;
 }
