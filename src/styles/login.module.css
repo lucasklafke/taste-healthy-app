@@ -1,0 +1,122 @@
+.loginPage {
+  width: 100%;
+  min-width: 390px;
+  display: flex;
+  min-height: 740;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F9F9F7;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 56px;
+}
+.image {
+  margin-top: 36px;
+}
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 16px;
+
+  width: 350px;
+  height: 56px;
+
+  /* principal */
+
+  background: #E9DAC4;
+  border-radius: 5px;
+}
+
+.label {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  /* darkest beige */
+
+  color: #AC8E60;
+}
+
+.confirmContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 374px;
+  margin-top: 24px;
+}
+.confirmButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 46px;
+  gap: 8px;
+
+  width: 152px;
+  height: 56px;
+
+  /* contrast */
+
+  background: #749EB2;
+  border-radius: 5px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border: none;
+}
+.rememberButton {
+  box-sizing: border-box;
+width: 12px;
+height: 12px;
+background: #FFFFFF;
+/* contrast */
+
+border: 1px solid #749EB2;
+border-radius: 2px;
+}
+
+.span {
+  width: 124px;
+height: 14px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+text-align: center;
+
+/* contrast */
+
+color: #749EB2;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.checkBoxContainer {
+  justify-content: space-between;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
