@@ -73,28 +73,29 @@
 .span {
   width: 66px;
   height: 28px;
-
 /* 24px */
+  color: white;
 
-font-family: 'Arial';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-/* identical to box height */
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height */
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-color: #FFFFFF;
+  color: #FFFFFF;
 
 
-/* Inside auto layout */
+  /* Inside auto layout */
 
-flex: none;
-order: 0;
-flex-grow: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
+
 .footer {
   display: flex;
   align-items: center;
@@ -117,4 +118,6 @@ margin-top: 16px;
 /* darkest beige */
 
 color: #AC8E60;
+cursor: pointer;
+
 }
