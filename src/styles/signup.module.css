@@ -6,7 +6,7 @@
   height: 100vh;
   flex-direction: column;
   align-items: center;
-  background-color: #F9F9F7;
+  background-color: #f9f9f7;
 }
 
 .title {
@@ -20,14 +20,14 @@
   line-height: 32px;
   display: flex;
   align-items: center;
-  color: #AC8E60;
+  color: #ac8e60;
   margin-top: 36px;
 }
 
 .separator {
   width: 350px;
   height: 1px;
-  background-color: #AC8E60;
+  background-color: #ac8e60;
   margin-top: 20px;
 }
 .form {
@@ -40,7 +40,6 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-
 }
 
 .label {
@@ -54,7 +53,7 @@
   display: flex;
   align-items: center;
 
-  color: #AC8E60;
+  color: #ac8e60;
 }
 
 .input {
@@ -67,7 +66,7 @@
   width: 350px;
   height: 56px;
   border: none;
-  background: #E9DAC4;
+  background: #e9dac4;
   border-radius: 5px;
 }
 .select {
@@ -79,7 +78,7 @@
   width: 374px;
   height: 56px;
   border: none;
-  background: #E9DAC4;
+  background: #e9dac4;
   border-radius: 5px;
 }
 
@@ -93,7 +92,7 @@
   width: 152px;
   height: 56px;
 
-  background: #749EB2;
+  background: #749eb2;
   border-radius: 5px;
   color: #ffffff;
 }
@@ -105,7 +104,7 @@
   width: 374px;
   height: 56px;
   margin-top: 252px;
-  background: #749EB2;
+  background: #749eb2;
   border-radius: 5px;
   color: #ffffff;
 }

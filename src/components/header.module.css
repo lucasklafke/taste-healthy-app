@@ -5,7 +5,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: #F9F9F7;
+  background-color: #f9f9f7;
 }
 
 .header {
@@ -23,30 +23,28 @@
 
   /* principal */
 
-  background: #E9DAC4;
+  background: #e9dac4;
 }
 
 .title {
-
   width: 219px;
   height: 41px;
-  
+
   /* titles - 36 */
-  
+
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 41px;
   text-align: center;
-  
+
   /* secondary */
-  
-  color: #BD8E83;
-  
-  
+
+  color: #bd8e83;
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 0;
   flex-grow: 0;

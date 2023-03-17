@@ -6,7 +6,7 @@
   height: 100vh;
   flex-direction: column;
   align-items: center;
-  background-color: #F9F9F7;
+  background-color: #f9f9f7;
 }
 .inputContainer {
   display: flex;
@@ -27,8 +27,8 @@
   width: 350px;
   height: 56px;
 
-  border:none;
-  background: #E9DAC4;
+  border: none;
+  background: #e9dac4;
   border-radius: 5px;
 }
 
@@ -44,7 +44,7 @@
 
   /* darkest beige */
 
-  color: #AC8E60;
+  color: #ac8e60;
 }
 
 .confirmContainer {
@@ -67,7 +67,7 @@
 
   /* contrast */
 
-  background: #749EB2;
+  background: #749eb2;
   color: white;
   border-radius: 5px;
 
@@ -80,37 +80,36 @@
 }
 .rememberButton {
   box-sizing: border-box;
-width: 12px;
-height: 12px;
-background: #FFFFFF;
-/* contrast */
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  /* contrast */
 
-border: 1px solid #749EB2;
-border-radius: 2px;
+  border: 1px solid #749eb2;
+  border-radius: 2px;
 }
 
 .span {
   width: 124px;
-height: 14px;
+  height: 14px;
 
-font-family: 'Arial';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
 
-text-align: center;
+  text-align: center;
 
-/* contrast */
+  /* contrast */
 
-color: #749EB2;
+  color: #749eb2;
 
+  /* Inside auto layout */
 
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 .checkBoxContainer {
