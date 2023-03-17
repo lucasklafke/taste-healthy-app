@@ -105,19 +105,19 @@
 }
 
 .subtitle {
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 17px;
-display: flex;
-justify-content: center;
-align-items: center;
-text-decoration-line: underline;
-width: fit-content;
-margin-top: 16px;
-/* darkest beige */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration-line: underline;
+  width: fit-content;
+  margin-top: 16px;
+  /* darkest beige */
 
-color: #AC8E60;
-cursor: pointer;
+  color: #AC8E60;
+  cursor: pointer;
 
 }

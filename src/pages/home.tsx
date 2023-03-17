@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <Header/>
-        <Image src={homeImage} alt="" className={styles.image}/>
-        <div className={styles.footer}>
-          <button className={styles.button} onClick={() => navigate('login')}><span className={styles.span}> <Link href='/login'> Entrar</Link></span></button>
-          <span className={styles.subtitle} onClick={() => navigate('signup')}>Ainda não cadastrado? Registre-se!</span>
+      <Image src={homeImage} alt="" className={styles.image}/>
+      <div className={styles.footer}>
+        <button className={styles.button} onClick={() => navigate('login')}><span className={styles.span}> <Link href='/login'> Entrar</Link></span></button>
+        <span className={styles.subtitle} onClick={() => navigate('signup')}>Ainda não cadastrado? Registre-se!</span>
       </div>
     </div>
    

@@ -10,26 +10,27 @@ export default function Login() {
     router.push(path)
   }
   return (
-  <div className={styles.page}>
-    <Header />
-    <h2 className={styles.title}>Cadastro</h2>
-    <div className={styles.separator}></div>
-    <form action="">
-      <div className={styles.inputContainer}>
-        <label htmlFor="username">Nome de Usuário</label>
-        <input type="text" name='username' className={styles.input}/>
-      </div>
-      <div className={styles.inputContainer}>
-        <select name="" id="" className={styles.input}>
-          <option value="Gênero">Gênero</option>
-          <option value="masculino">masculino</option>
-          <option value="feminino">feminino</option>
-          <option value="outro">outro</option>
-        </select>
-      </div>
-
-    </form>
-  </div>
+    <div className={styles.page}>
+      <Header />
+      <h2 className={styles.title}>Cadastro</h2>
+      <div className={styles.separator}></div>
+      <form onSubmit={(event) => handleSubmit(event,'/home')} className={styles.form}>
+        <div className={styles.inputContainer}>
+          <label htmlFor="username">Nome de Usuário</label>
+          <input type="text" name='username' className={styles.input}/>
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="gender">Gênero</label>
+          <select name="" id="" className={styles.select}>
+            <option value=""></option>
+            <option value="masculino">masculino</option>
+            <option value="feminino">feminino</option>
+            <option value="outro">outro</option>
+          </select>
+        </div>
+        <button className={styles.registerButton}>Registrar-se</button>
+      </form>
+    </div>
 
   )
 }

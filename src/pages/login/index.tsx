@@ -7,17 +7,16 @@ export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [remeberUser, setRemeberUser] = useState(false)
-  function handleSubmit(e:any) {
-    e.preventDefault()
-    console.log(email, password, remeberUser)
+  function handleSubmit(event:any) {
+    event.preventDefault()
   }
   return (
-  <div className={styles.loginPage}>
-    <Header/>
-    <Image src={LoginImage} alt="" className={styles.image}/>
+    <div className={styles.loginPage}>
+      <Header/>
+      <Image src={LoginImage} alt="" className={styles.image}/>
 
-    <div className={styles.inputContainer}>
-      <form autoComplete='off' onSubmit={(e) => handleSubmit(e)}>
+      <div className={styles.inputContainer}>
+        <form autoComplete='off' onSubmit={(event) => handleSubmit(event)}>
           <div>
             <label className={styles.label}>E-mail</label>
             <input className={styles.input} placeholder='Digite seu e-mail' type='email' autoComplete='off' value={email} onChange={(e) => setEmail(e.target.value)}/>
@@ -33,9 +32,9 @@ export default function Login() {
               <span className={styles.span}>Lembrar meu usuário</span>
             </div>
           </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
 
   )
 }

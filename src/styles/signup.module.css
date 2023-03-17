@@ -70,6 +70,18 @@
   background: #E9DAC4;
   border-radius: 5px;
 }
+.select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 12px;
+
+  width: 374px;
+  height: 56px;
+  border: none;
+  background: #E9DAC4;
+  border-radius: 5px;
+}
 
 .nextButton {
   display: flex;
@@ -81,6 +93,18 @@
   width: 152px;
   height: 56px;
 
+  background: #749EB2;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.registerButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 374px;
+  height: 56px;
+  margin-top: 252px;
   background: #749EB2;
   border-radius: 5px;
   color: #ffffff;
