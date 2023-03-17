@@ -12,6 +12,23 @@ export default function Login() {
   return (
   <div className={styles.page}>
     <Header />
+    <h2 className={styles.title}>Cadastro</h2>
+    <div className={styles.separator}></div>
+    <form action="">
+      <div className={styles.inputContainer}>
+        <label htmlFor="username">Nome de Usuário</label>
+        <input type="text" name='username' className={styles.input}/>
+      </div>
+      <div className={styles.inputContainer}>
+        <select name="" id="" className={styles.input}>
+          <option value="Gênero">Gênero</option>
+          <option value="masculino">masculino</option>
+          <option value="feminino">feminino</option>
+          <option value="outro">outro</option>
+        </select>
+      </div>
+
+    </form>
   </div>
 
   )
