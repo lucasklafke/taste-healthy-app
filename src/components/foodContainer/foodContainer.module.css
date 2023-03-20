@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  width: 350px;
+  min-width: 350px;
+  height: 152px;
+  background-color: #21BACF;
+  border-radius: 5px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.titleContainer {
+  display: flex;
+  height: 136px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #002032;
+}
+
+.infoContainer {
+  display: flex;
+  min-width: 100px;
+  height: 136px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+.infoText {
+  font-family: 'Roboto', sans-serif;
+;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 10px;
+  text-align: center;
+  color: #002032;
+  width: fit-content;
+}
+
+.separator {
+  height: 136px;
+  width: 0px;
+  
+  border: 1px solid #000000;
+  
+  flex: none;
+  flex-grow: 0;
+}
+
+.image {
+  width: 92px;
+  height: 92px;
+  background-color: antiquewhite;
+}
+.descriptionContainer {
+  display: flex;
+  height: 136px;
+  flex-direction: column;
+  align-items: center;
+  min-width: 92px;
+  gap: 8px;
+  position: relative;
+}
+
+.descriptionTitle {
+  font-family: 'Roboto', sans-serif;
+;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+}
+.description {
+  min-width: 88px;
+  min-height: 60px;
+
+  font-family: 'Roboto', sans-serif;
+;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 10px;
+  text-align: center;
+
+  color: #002032;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.seeMore {
+  position: absolute;
+  left: calc(50% - 43px/2 + 0.5px);
+  top: 126px;
+  font-family: 'Roboto', sans-serif;
+;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 10px;
+  text-align: center;
+  text-decoration-line: underline;
+
+  color: #002032;
+}

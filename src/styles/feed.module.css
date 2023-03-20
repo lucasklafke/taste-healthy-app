@@ -1,7 +1,7 @@
 .page {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   background-color: #749EB2;
@@ -10,7 +10,8 @@
 .title {
   width: 149px;
   height: 32px;
-  font-family: 'Arial';
+  font-family: 'Roboto', sans-serif;
+;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -20,4 +21,6 @@
   color: #FFFFFF;
   /* border: 1px solid #000000; */
   text-decoration: solid;
+  -webkit-text-stroke: 1px black;
+  margin-top: 12px;
 }

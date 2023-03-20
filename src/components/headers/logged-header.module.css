@@ -52,7 +52,8 @@
 .title {
   width: 82px;
   height: 56px;
-  font-family: 'Arial';
+  font-family: 'Roboto', sans-serif;
+;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;

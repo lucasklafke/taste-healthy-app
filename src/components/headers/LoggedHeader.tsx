@@ -14,7 +14,7 @@ export default function Header() {
             <IoSearchSharp className={styles.search}/>
           </div>
         </div>
-        <h1 className={styles.title}>Taste Healthy</h1>
+        <span className={styles.title}>Taste Healthy</span>
       </div>
     </div>
   );
