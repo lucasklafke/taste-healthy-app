@@ -2,7 +2,7 @@ import styles from '@/styles/home.module.css';
 import Image from 'next/image';
 import homeImage from '@/assets/images/homeImage.png';
 import Link from 'next/link';
-import Header from '@/components/Header';
+import Header from '@/components/headers/Header';
 import { useRouter } from 'next/router';
 export default function Home() {
   const router = useRouter();

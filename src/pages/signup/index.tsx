@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/headers/Header';
 import styles from '@/styles/signup.module.css';
 import { useRouter } from 'next/router';
 import { useState } from 'react';

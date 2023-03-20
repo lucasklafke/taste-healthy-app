@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Header from '@/components/Header';
+import Header from '@/components/headers/Header';
 import LoginImage from '@/assets/images/LoginImage.png';
 import styles from '@/styles/login.module.css';
 import { useState } from 'react';

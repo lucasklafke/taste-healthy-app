@@ -94,6 +94,7 @@ button {
   color: #002032;
 }
 ::placeholder {
+  font-size: 12px;
   color: white;
 }
 a {
