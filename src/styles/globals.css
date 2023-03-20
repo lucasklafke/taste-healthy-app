@@ -91,7 +91,10 @@ button {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  color: #ac8e60;
+  color: #002032;
+}
+::placeholder {
+  color: white;
 }
 a {
   text-decoration: none;

@@ -5,7 +5,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: #f9f9f7;
+  background-color: #21BACF;
 }
 
 .header {
@@ -23,7 +23,7 @@
 
   /* principal */
 
-  background: #e9dac4;
+  background: #21BACF;
 }
 
 .title {
@@ -41,7 +41,7 @@
 
   /* secondary */
 
-  color: #bd8e83;
+  color: #002032;
 
   /* Inside auto layout */
 

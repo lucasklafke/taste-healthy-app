@@ -53,7 +53,7 @@
   display: flex;
   align-items: center;
 
-  color: #ac8e60;
+  color: #749EB2;
 }
 
 .input {
@@ -66,19 +66,22 @@
   width: 350px;
   height: 56px;
   border: none;
-  background: #e9dac4;
+  background: #21BACF;
+  color: white;
   border-radius: 5px;
 }
+
 .select {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 12px 12px;
-
   width: 374px;
   height: 56px;
   border: none;
-  background: #e9dac4;
+  background: #21BACF;
+  font-size: 12px;
+  color: white;
   border-radius: 5px;
 }
 
