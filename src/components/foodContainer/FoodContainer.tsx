@@ -1,9 +1,12 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import styles from './foodContainer.module.css'
 
 export default function FoodContainer(props: any) {
+  const foodInfo = {id : 1}
+  const route = useRouter()
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={() => route.push(`/feed/${foodInfo.id}`)}>
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Strogonoff</h1>
         <div className={styles.image}></div>
