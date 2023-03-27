@@ -34,8 +34,8 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin-top: 34px;
+  gap: 22px;
+  margin-top: 28px;
   align-items: center;
 }
 .inputContainer {
