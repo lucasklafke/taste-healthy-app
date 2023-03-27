@@ -9,10 +9,8 @@ export default function Login() {
   const [gender, setGender] = useState('')
   function handleSubmit(event: any, path: string) {
     event.preventDefault();
-    console.log(username, gender)
     router.push(path);
   }
-  console.log(gender)
   return (
     <div className={styles.page}>
       <Header />
