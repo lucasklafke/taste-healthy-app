@@ -1,99 +1,98 @@
+import FormularyError from '@/components/errorComponents/formularyError';
 import Header from '@/components/headers/Header';
+import {Input} from './styles';
 import styles from '@/styles/signup.module.css';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { ChangeEvent, InputHTMLAttributes, useRef, useState } from 'react';
+import { useSignupForm, FormActions } from '@/contexts/signupContext';
 
 export default function Login() {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [username ,setUsername] = useState('')
-  const [gender, setGender] = useState('')
+  const {state, dispatch} = useSignupForm()
+  
+  const handleInputChange =(event:ChangeEvent<HTMLInputElement>, action:string) => {
+    switch(action) {
+      case 'setEmail':
+        return dispatch({
+          type: FormActions.setEmail,
+          payload: event.target.value
+        })
+      case 'setPassword':
+        return dispatch({
+          type: FormActions.setPassword,
+          payload: event.target.value
+        })
+      case 'setConfirmPassword':
+        return dispatch({
+          type: FormActions.setConfirmPassword,
+          payload: event.target.value
+        })
+      default:
+        console.log(state)
+    }
+  }
 
   function handleSubmit(event: any, path: string) {
     event.preventDefault();
-    console.log(email, password, confirmPassword);
-    const url = `/api/user`
-    const data = {
-      username,
-      email,
-      password
+    switch('') {
+      case state.email:
+        window.alert('erro no email')
+        console.log(state)
+        return dispatch({ type: FormActions.setError, payload: 'email'})
+      case state.password:
+        window.alert('erro no password')
+        console.log(state)
+        return dispatch({ type: FormActions.setError, payload: 'password'})
+      case state.confirmPassword:
+        window.alert('erro no confirm password')
+        console.log(event.target)
+        return dispatch({ type: FormActions.setError, payload: 'confirmPassword'})
+      default:
+        router.push('/signup/register')
     }
-    const promise = axios.post(url, data)
-    promise.then(response => {
-      console.log('asdgfasdg', response)
-      setTimeout(() => router.push(path), 1000)
-    })
-    promise.catch(err => {
-      console.log(err.response.data)
-    })
   }
   return (
     <div className={styles.page}>
       <Header />
       <h2 className={styles.title}>Cadastro</h2>
       <div className={styles.separator}></div>
-      <form
-        className={styles.form}
-        autoComplete="off"
-        onSubmit={(e) => handleSubmit(e, '/login')}
-      >
-        <div className={styles.inputContainer}>
-          <label htmlFor="email" className={styles.label}>
-            E-mail
+      {state.error? <FormularyError><span>{state.error} não informado</span></FormularyError> : <></>}
+      <form className={styles.form} autoComplete="off" onSubmit={(e) => handleSubmit(e, '/login')}>
+        <div>
+          <label htmlFor="password" className={styles.label}>
+            Email
           </label>
-          <input
-            type="email"
-            className={styles.input}
-            autoComplete="off"
-            placeholder="Digite seu e-mail"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
+          <Input placeholder='digite seu email' type="email" value={state.email} border={state.error === 'email'? '1px red solid' : 'none'} onChange={(event) => handleInputChange(event, 'setEmail')} />
         </div>
-        
-        <div className={styles.inputContainer}>
+        <div className={styles.InputContainer}>
           <label htmlFor="password" className={styles.label}>
             Senha
           </label>
-          <input
+          <Input
             type="password"
+            border={state.error === 'password'? '1px red solid' : 'none'}
             name="password"
-            className={styles.input}
+            className={styles.Input}
             autoComplete="off"
             placeholder="Digite sua senha"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
+            value={state.password} 
+            onChange={(event) => handleInputChange(event, 'setPassword')}
           />
         </div>
-        <div className={styles.inputContainer}>
+        <div className={styles.InputContainer}>
           <label htmlFor="confirmPassword" className={styles.label}>
             Confirmar senha
           </label>
-          <input
+          <Input
             type="password"
+            border={state.error === 'password'? '1px red solid' : 'none'}
             name="confirmPassword"
-            className={styles.input}
+            className={styles.Input}
             autoComplete="off"
             placeholder="Digite sua senha novamente"
-            value={confirmPassword}
-            onChange={(event) => setConfirmPassword(event.target.value)}
+            value={state.confirmPassword} onChange={(event) => handleInputChange(event, 'setConfirmPassword')}
           />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="username">Nome de Usuário</label>
-          <input type="text" name="username" className={styles.input} value={username} onChange={(event) => {setUsername(event.target.value)}}/>
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="gender">Gênero</label>
-            <select name="" id="" className={styles.select}>
-              <option value={gender}></option>
-              <option value="masculino" onClick={() => setGender('masculino')}>masculino</option>
-              <option value="feminino" onClick={() => setGender('feminino')}>feminino</option>
-              <option value="outro" onClick={() => setGender('outro')}>outro</option>
-            </select>
         </div>
         <button className={styles.nextButton}>Avançar</button>
       </form>

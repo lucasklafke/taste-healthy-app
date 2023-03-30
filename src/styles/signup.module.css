@@ -68,8 +68,8 @@
   width: 350px;
   height: 56px;
   border: none;
-  background: #21BACF;
-  color: white;
+  background: #E8F0FE;
+  color: black;
   border-radius: 5px;
 }
 
@@ -81,9 +81,9 @@
   width: 374px;
   height: 56px;
   border: none;
-  background: #21BACF;
+  background: #E8F0FE;
   font-size: 12px;
-  color: white;
+  color: black;
   border-radius: 5px;
 }
 
