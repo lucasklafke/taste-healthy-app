@@ -36,15 +36,12 @@ export default function Login() {
     event.preventDefault()
     switch('') {
     case state.email:
-      window.alert('erro no email')
       console.log(state)
       return dispatch({ type: FormActions.setError, payload: 'email'})
     case state.password:
-      window.alert('erro no password')
       console.log(state)
       return dispatch({ type: FormActions.setError, payload: 'password'})
     case state.confirmPassword:
-      window.alert('erro no confirm password')
       console.log(event.target)
       return dispatch({ type: FormActions.setError, payload: 'confirmPassword'})
     default:
