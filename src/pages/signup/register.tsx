@@ -31,10 +31,8 @@ export default function Login() {
     console.log(state)
     switch('') {
     case state.username:
-      window.alert('erro no username')
       return dispatch({type: FormActions.setError, payload: 'username'})
     case state.gender:
-      window.alert('erro no gender')
       return dispatch({type: FormActions.setError, payload: 'gender'})
     default:
       router.push('/signup/register')
