@@ -9,7 +9,7 @@ export const Input = styled.input<Props>`
   padding: 0px 12px;
   gap: 16px;
 
-  width: 350px;
+  width: 320px;
   height: 56px;
   border: ${props => props.border? 'red' : 'none'};
   background: #E8F0FE;

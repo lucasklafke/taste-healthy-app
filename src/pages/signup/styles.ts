@@ -9,7 +9,7 @@ const Input = styled.input<Props>`
   align-items: center;
   padding: 0px 12px;
   gap: 16px;
-  width: 350px;
+  width: 320px;
   height: 56px;
   border: ${props => props.border};
   background: #E8F0FE;
