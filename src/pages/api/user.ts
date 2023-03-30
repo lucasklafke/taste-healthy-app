@@ -19,7 +19,6 @@ export default async function handler(
   }
   if(req.method === 'POST') {
     const body:State = req.body
-    console.log(body)
     const data = {
       username: body.username,
       email: body.email,

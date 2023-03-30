@@ -3,12 +3,32 @@ import Header from '@/components/headers/Header'
 import LoginImage from '@/assets/images/LoginImage.png'
 import styles from '@/styles/login.module.css'
 import { useState } from 'react'
+import { Input } from '@/components/inputs/Input'
+import axios from 'axios'
+import { useRouter } from 'next/router'
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [remeberUser, setRemeberUser] = useState(false)
+  const router = useRouter()
+  const login = async () => {
+    const url = '/api/auth'
+    const data = {
+      email,
+      password
+    }
+    try{
+      const result = await axios.post(url, data)
+      localStorage.setItem('token', JSON.stringify(result.data.access_token))
+      router.push('/feed')
+    }catch(err) {
+      console.log(err)
+    }
+  }
   function handleSubmit(event: any) {
     event.preventDefault()
+    login()
+
   }
   return (
     <div className={styles.loginPage}>
@@ -19,8 +39,7 @@ export default function Login() {
         <form autoComplete="off" onSubmit={(event) => handleSubmit(event)}>
           <div>
             <label className={styles.label}>E-mail</label>
-            <input
-              className={styles.input}
+            <Input
               placeholder="Digite seu e-mail"
               type="email"
               autoComplete="off"
@@ -30,8 +49,7 @@ export default function Login() {
           </div>
           <div>
             <label className={styles.label}>Password</label>
-            <input
-              className={styles.input}
+            <Input
               placeholder="Digite sua senha"
               type="password"
               autoComplete="off"

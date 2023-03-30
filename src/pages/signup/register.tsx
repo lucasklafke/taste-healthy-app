@@ -32,7 +32,7 @@ export default function Login() {
     try{
       const result = await axios.post(url, state)
       console.log(result)
-      router.push('/home')
+      router.push('/login')
     }catch(err) {
       window.alert(err)
     }
