@@ -1,14 +1,14 @@
-import Image from 'next/image';
-import Header from '@/components/headers/Header';
-import LoginImage from '@/assets/images/LoginImage.png';
-import styles from '@/styles/login.module.css';
-import { useState } from 'react';
+import Image from 'next/image'
+import Header from '@/components/headers/Header'
+import LoginImage from '@/assets/images/LoginImage.png'
+import styles from '@/styles/login.module.css'
+import { useState } from 'react'
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [remeberUser, setRemeberUser] = useState(false);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [remeberUser, setRemeberUser] = useState(false)
   function handleSubmit(event: any) {
-    event.preventDefault();
+    event.preventDefault()
   }
   return (
     <div className={styles.loginPage}>
@@ -52,5 +52,5 @@ export default function Login() {
         </form>
       </div>
     </div>
-  );
+  )
 }

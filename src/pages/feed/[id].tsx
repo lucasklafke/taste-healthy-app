@@ -1,7 +1,7 @@
-import Header from '@/components/headers/LoggedHeader';
-import styles from '@/styles/feed.module.css';
-import FoodContainer from '@/components/foodContainer/FoodContainer';
-import { useRouter } from 'next/router';
+import Header from '@/components/headers/LoggedHeader'
+import styles from '@/styles/feed.module.css'
+import FoodContainer from '@/components/foodContainer/FoodContainer'
+import { useRouter } from 'next/router'
 export default function Feed() {
   const router = useRouter()
   console.log(router.query)

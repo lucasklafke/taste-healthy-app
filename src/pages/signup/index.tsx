@@ -1,55 +1,54 @@
-import FormularyError from '@/components/errorComponents/formularyError';
-import Header from '@/components/headers/Header';
-import {Input} from './styles';
-import styles from '@/styles/signup.module.css';
-import axios from 'axios';
-import { useRouter } from 'next/router';
-import { ChangeEvent, InputHTMLAttributes, useRef, useState } from 'react';
-import { useSignupForm, FormActions } from '@/contexts/signupContext';
+import FormularyError from '@/components/errorComponents/formularyError'
+import Header from '@/components/headers/Header'
+import {Input} from './styles'
+import styles from '@/styles/signup.module.css'
+import { useRouter } from 'next/router'
+import { ChangeEvent } from 'react'
+import { useSignupForm, FormActions } from '@/contexts/signupContext'
 
 export default function Login() {
-  const router = useRouter();
+  const router = useRouter()
   const {state, dispatch} = useSignupForm()
   
   const handleInputChange =(event:ChangeEvent<HTMLInputElement>, action:string) => {
     switch(action) {
-      case 'setEmail':
-        return dispatch({
-          type: FormActions.setEmail,
-          payload: event.target.value
-        })
-      case 'setPassword':
-        return dispatch({
-          type: FormActions.setPassword,
-          payload: event.target.value
-        })
-      case 'setConfirmPassword':
-        return dispatch({
-          type: FormActions.setConfirmPassword,
-          payload: event.target.value
-        })
-      default:
-        console.log(state)
+    case 'setEmail':
+      return dispatch({
+        type: FormActions.setEmail,
+        payload: event.target.value
+      })
+    case 'setPassword':
+      return dispatch({
+        type: FormActions.setPassword,
+        payload: event.target.value
+      })
+    case 'setConfirmPassword':
+      return dispatch({
+        type: FormActions.setConfirmPassword,
+        payload: event.target.value
+      })
+    default:
+      console.log(state)
     }
   }
 
-  function handleSubmit(event: any, path: string) {
-    event.preventDefault();
+  function handleSubmit(event: any) {
+    event.preventDefault()
     switch('') {
-      case state.email:
-        window.alert('erro no email')
-        console.log(state)
-        return dispatch({ type: FormActions.setError, payload: 'email'})
-      case state.password:
-        window.alert('erro no password')
-        console.log(state)
-        return dispatch({ type: FormActions.setError, payload: 'password'})
-      case state.confirmPassword:
-        window.alert('erro no confirm password')
-        console.log(event.target)
-        return dispatch({ type: FormActions.setError, payload: 'confirmPassword'})
-      default:
-        router.push('/signup/register')
+    case state.email:
+      window.alert('erro no email')
+      console.log(state)
+      return dispatch({ type: FormActions.setError, payload: 'email'})
+    case state.password:
+      window.alert('erro no password')
+      console.log(state)
+      return dispatch({ type: FormActions.setError, payload: 'password'})
+    case state.confirmPassword:
+      window.alert('erro no confirm password')
+      console.log(event.target)
+      return dispatch({ type: FormActions.setError, payload: 'confirmPassword'})
+    default:
+      router.push('/signup/register')
     }
   }
   return (
@@ -58,7 +57,7 @@ export default function Login() {
       <h2 className={styles.title}>Cadastro</h2>
       <div className={styles.separator}></div>
       {state.error? <FormularyError><span>{state.error} não informado</span></FormularyError> : <></>}
-      <form className={styles.form} autoComplete="off" onSubmit={(e) => handleSubmit(e, '/login')}>
+      <form className={styles.form} autoComplete="off" onSubmit={(e) => handleSubmit(e)}>
         <div>
           <label htmlFor="password" className={styles.label}>
             Email
@@ -97,5 +96,5 @@ export default function Login() {
         <button className={styles.nextButton}>Avançar</button>
       </form>
     </div>
-  );
+  )
 }

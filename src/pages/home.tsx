@@ -1,13 +1,13 @@
-import styles from '@/styles/home.module.css';
-import Image from 'next/image';
-import homeImage from '@/assets/images/homeImage.png';
-import Link from 'next/link';
-import Header from '@/components/headers/Header';
-import { useRouter } from 'next/router';
+import styles from '@/styles/home.module.css'
+import Image from 'next/image'
+import homeImage from '@/assets/images/homeImage.png'
+import Link from 'next/link'
+import Header from '@/components/headers/Header'
+import { useRouter } from 'next/router'
 export default function Home() {
-  const router = useRouter();
+  const router = useRouter()
   function navigate(path: string) {
-    router.push(path);
+    router.push(path)
   }
   return (
     <div className={styles.home}>
@@ -25,5 +25,5 @@ export default function Home() {
         </span>
       </div>
     </div>
-  );
+  )
 }

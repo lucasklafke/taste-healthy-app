@@ -5,9 +5,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -22,6 +20,14 @@
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".tsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".tsx"] }],
+    "no-unused-vars": [
+      "error",
+      {
+          "ignoreRestSiblings": true,
+          "destructuredArrayIgnorePattern": "[A-Z]",
+          "caughtErrors": "none"
+      }
+  ]
   }
 }

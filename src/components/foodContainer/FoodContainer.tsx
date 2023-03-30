@@ -1,8 +1,8 @@
-import Image from 'next/image'
+/* eslint-disable react/no-unescaped-entities */
 import { useRouter } from 'next/router'
 import styles from './foodContainer.module.css'
 
-export default function FoodContainer(props: any) {
+export default function FoodContainer() {
   const foodInfo = {id : 1}
   const route = useRouter()
   return (
@@ -21,7 +21,8 @@ export default function FoodContainer(props: any) {
       <div className={styles.separator}></div>
       <div className={styles.descriptionContainer}>
         <h2 className={styles.descriptionTitle}>Descrição</h2>
-        <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of</span>
+        <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of</span>
         <span className={styles.seeMore}>Ver mais...</span>
       </div>
     </div>

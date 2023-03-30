@@ -1,5 +1,5 @@
-import styles from './logged-header.module.css';
-import { IoMenuSharp, IoPersonSharp, IoSearchSharp } from "react-icons/io5";
+import styles from './logged-header.module.css'
+import { IoMenuSharp, IoPersonSharp, IoSearchSharp } from 'react-icons/io5'
 export default function Header() {
   return (
     <div className={styles.header}>
@@ -17,5 +17,5 @@ export default function Header() {
         <span className={styles.title}>Taste Healthy</span>
       </div>
     </div>
-  );
+  )
 }
