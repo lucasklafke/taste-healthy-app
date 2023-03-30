@@ -5,7 +5,7 @@ type Action = {
   type: FormActions;
   payload: any;
 };
-type State = {
+export type State = {
   currentStep: number;
   email: string;
   password: string;

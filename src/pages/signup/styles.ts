@@ -27,7 +27,7 @@ export const Select = styled.select<Props>`
   flex-direction: row;
   align-items: center;
   padding: 12px 12px;
-  width: 374px;
+  width: 343px;
   height: 56px;
   border: ${props => props.border};
   background: #E8F0FE;

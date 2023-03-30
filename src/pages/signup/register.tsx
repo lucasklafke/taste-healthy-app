@@ -2,6 +2,7 @@ import FormularyError from '@/components/errorComponents/formularyError'
 import Header from '@/components/headers/Header'
 import { FormActions, useSignupForm } from '@/contexts/signupContext'
 import styles from '@/styles/signup.module.css'
+import axios from 'axios'
 import { useRouter } from 'next/router'
 import { ChangeEvent } from 'react'
 import Input, { Select } from './styles'
@@ -26,6 +27,16 @@ export default function Login() {
     }
   }
 
+  const register = async () => {
+    const url = '/api/user'
+    try{
+      const result = await axios.post(url, state)
+      console.log(result)
+      router.push('/home')
+    }catch(err) {
+      window.alert(err)
+    }
+  }
   function handleSubmit(event: any) {
     event.preventDefault()
     console.log(state)
@@ -35,7 +46,7 @@ export default function Login() {
     case state.gender:
       return dispatch({type: FormActions.setError, payload: 'gender'})
     default:
-      router.push('/signup/register')
+      register()
     }
   }
   return (
@@ -46,12 +57,12 @@ export default function Login() {
       {state.error? <FormularyError><span>{state.error} não informado</span></FormularyError> : <></>}
       <form onSubmit={(event) => handleSubmit(event)} className={styles.form}>
         <div className={styles.inputContainer}>
-          <label htmlFor="username">Nome de Usuário</label>
+          <label htmlFor="username" className={styles.label}>Nome de Usuário</label>
           <Input type="text" name="username" border={state.error === 'username'? '1px red solid' : 'none'} value={state.username} onChange={(event) => {handleInputChange(event, 'setUsername')}}/>
         </div>
         <div className={styles.inputContainer}>
-          <label htmlFor="gender">Gênero</label>
-          <Select name="gender" id="gender" className={styles.select} border={state.error === 'gender'? '1px red solid' : 'none'} onChange={(e) => dispatch({type:FormActions.setGender, payload: e.target.value})}>
+          <label htmlFor="gender" className={styles.label}>Gênero</label>
+          <Select name="gender" id="gender" border={state.error === 'gender'? '1px red solid' : 'none'} onChange={(e) => dispatch({type:FormActions.setGender, payload: e.target.value})}>
             <option value='' onClick={() => console.log('sdasuidghsduia')}></option>
             <option value="masculino" >masculino</option>
             <option value="feminino" >feminino</option>

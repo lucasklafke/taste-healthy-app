@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
+import { State } from '@/contexts/signupContext'
 type Data = {
   name: string;
 };
@@ -17,8 +18,14 @@ export default async function handler(
     res.status(200).send(data)
   }
   if(req.method === 'POST') {
-    const body = req.body
-    const promise = axios.post(url, body)
+    const body:State = req.body
+    console.log(body)
+    const data = {
+      username: body.username,
+      email: body.email,
+      password: body.password
+    }
+    const promise = axios.post(url, data)
     promise.then(response => {
       res.status(200).send(response.data)
     })
