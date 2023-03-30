@@ -4,7 +4,7 @@ import { FormActions, useSignupForm } from '@/contexts/signupContext'
 import styles from '@/styles/signup.module.css'
 import { useRouter } from 'next/router'
 import { ChangeEvent } from 'react'
-import { Input, Select } from './styles'
+import Input, { Select } from './styles'
 export default function Login() {
   const router = useRouter()
   const {state, dispatch} = useSignupForm()

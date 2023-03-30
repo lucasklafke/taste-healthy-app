@@ -3,7 +3,7 @@ import styled from 'styled-components'
 interface Props {
   border: string;
 }
-export const Input = styled.input<Props>`
+const Input = styled.input<Props>`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -35,3 +35,5 @@ export const Select = styled.select<Props>`
   color: black;
   border-radius: 5px;
 `
+
+export default Input

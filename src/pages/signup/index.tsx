@@ -1,6 +1,6 @@
 import FormularyError from '@/components/errorComponents/formularyError'
 import Header from '@/components/headers/Header'
-import {Input} from './styles'
+import Input from './styles'
 import styles from '@/styles/signup.module.css'
 import { useRouter } from 'next/router'
 import { ChangeEvent } from 'react'
