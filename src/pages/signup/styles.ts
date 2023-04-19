@@ -15,10 +15,10 @@ const Input = styled.input<Props>`
   background: #E8F0FE;
   color: black;
   border-radius: 5px;
-
   ::placeholder{
-    font-size: 10px;
+    font-size: 11px;
     color: gray;
+    letter-spacing: 0.8px
   }
 `
 

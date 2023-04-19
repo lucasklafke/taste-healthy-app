@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
   margin-top: 56px;
   max-width: 100vw;
 }
@@ -64,6 +65,7 @@
 
   width: 152px;
   height: 56px;
+  cursor:pointer;
 
   /* contrast */
 

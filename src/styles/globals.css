@@ -108,6 +108,18 @@ input,
 select {
   color: #2b3c46;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px #E8F0FE inset;
+  box-shadow: 0 0 0 30px #E8F0FE inset;
+  -webkit-text-fill-color: #333;
+}
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

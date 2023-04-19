@@ -1,21 +1,15 @@
-import styles from './logged-header.module.css'
 import { IoMenuSharp, IoPersonSharp, IoSearchSharp } from 'react-icons/io5'
+import { HeaderContainer } from './styles'
 export default function Header() {
   return (
-    <div className={styles.header}>
-      <div className={styles.contentContainer}>
-        <div className={styles.searchMenuContainer}>
-          <div className={styles.menu}>
-            <IoMenuSharp className={styles.icon}/>
-            <IoPersonSharp className={styles.icon}/>
-          </div>
-          <div className={styles.searchContainer}>
-            <input type="text" className={styles.input} placeholder='Procure por receitas e ingredientes!'/>
-            <IoSearchSharp className={styles.search}/>
+    <HeaderContainer>
+        <div className='contentContainer'>
+          <IoMenuSharp className='icon'/>
+          <div className='searchContainer'>
+            <label htmlFor='search' className='label' ><IoSearchSharp className='search'/></label>
+            <input type="text" className='input' name='search' id='search' placeholder='Procure por receitas e ingredientes!'/>
           </div>
         </div>
-        <span className={styles.title}>Taste Healthy</span>
-      </div>
-    </div>
+    </HeaderContainer>
   )
 }

@@ -19,15 +19,17 @@
 .searchMenuContainer {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .menu {
+  position: absolute;
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 8px 0px;
   gap: 8px;
   width: 230px;
-  height: 56px;
   flex: none;
   order: 0;
   align-self: stretch;
@@ -53,10 +55,9 @@
   width: 82px;
   height: 56px;
   font-family: 'Roboto', sans-serif;
-;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 28px;
   text-align: center;
   color: #002032;

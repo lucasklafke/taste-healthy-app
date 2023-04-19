@@ -6,16 +6,29 @@ export default function Feed() {
     <div className={styles.page}>
       <Header />
       <h1 className={styles.title}>Populares</h1>
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
+      <div className={styles.filters}>
+        <div>
+          <input type="radio" name='dishes' />
+          <label htmlFor="dishes">Receitas</label>
+        </div>
+        <div>
+          <input type="radio" name='ingredients' />
+          <label htmlFor="ingredients">Ingredientes</label>
+        </div>
+      </div>
+      <main className={styles.feedContent}>
+
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+        <FoodContainer />
+      </main>
     </div>
   )
 }

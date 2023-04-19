@@ -11,7 +11,6 @@
   width: 149px;
   height: 32px;
   font-family: 'Roboto', sans-serif;
-;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -23,4 +22,17 @@
   text-decoration: solid;
   -webkit-text-stroke: 1px black;
   margin-top: 12px;
+}
+
+.filters {
+  display: flex;
+}
+
+.feedContent {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
 }

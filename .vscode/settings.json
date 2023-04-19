@@ -1,4 +1,7 @@
 {
   "editor.fontSize": 14,
-  "editor.fontFamily": "source code pro"
+  "editor.fontWeight": "500",
+  "editor.fontFamily": "JetBrains Mono",
+  "debug.allowBreakpointsEverywhere": false,
+  "css.format.preserveNewLines": false
 }

@@ -15,7 +15,8 @@ export const FormularyError = styled.div`
   span{
     text-align: center;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
+    letter-spacing: 0.3px;
   }
 `
 

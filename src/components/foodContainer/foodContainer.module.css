@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  width: 350px;
+  width: 100%;
+  max-width: 480px;
   min-width: 350px;
   height: 152px;
   background-color: #21BACF;
@@ -9,7 +10,7 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: 16px;
+  cursor: pointer;
 }
 
 .titleContainer {

@@ -10,15 +10,6 @@ export default function Feed() {
       <Header />
       <h1 className={styles.title}>Populares</h1>
       <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
-      <FoodContainer />
     </div>
   )
 }

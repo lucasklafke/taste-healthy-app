@@ -6,10 +6,13 @@ import { useState } from 'react'
 import { Input } from '@/components/inputs/Input'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import FormularyError from '@/components/errorComponents/formularyError'
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [remeberUser, setRemeberUser] = useState(false)
+  const [error, setError] = useState('')
+
   const router = useRouter()
   const login = async () => {
     const url = '/api/auth'
@@ -17,12 +20,18 @@ export default function Login() {
       email,
       password
     }
+    switch('') {
+      case email:
+        return setError('email inválido!')
+      case password:
+        return setError('senha inválida!') 
+    }
     try{
       const result = await axios.post(url, data)
       localStorage.setItem('token', JSON.stringify(result.data.access_token))
       router.push('/feed')
-    }catch(err) {
-      console.log(err)
+    }catch(error:any) {
+      setError('email ou senha inválidos!')
     }
   }
   function handleSubmit(event: any) {
@@ -36,6 +45,7 @@ export default function Login() {
       <Image src={LoginImage} alt="" className={styles.image} />
 
       <div className={styles.inputContainer}>
+        {error?<FormularyError><span>{error}</span></FormularyError>: <></>}
         <form autoComplete="off" onSubmit={(event) => handleSubmit(event)}>
           <div>
             <label className={styles.label}>E-mail</label>
