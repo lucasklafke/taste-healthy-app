@@ -21,10 +21,10 @@ export default function Login() {
       password
     }
     switch('') {
-      case email:
-        return setError('email inválido!')
-      case password:
-        return setError('senha inválida!') 
+    case email:
+      return setError('email inválido!')
+    case password:
+      return setError('senha inválida!') 
     }
     try{
       const result = await axios.post(url, data)
