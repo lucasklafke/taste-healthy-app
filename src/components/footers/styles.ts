@@ -47,18 +47,20 @@ export const CreateFoodOverlayContainer = styled.div`
   position: fixed;
   bottom: 0;
   align-items: center;
+  justify-content: center;
   background-color: #21BACF;
   z-index: 11;
   border-radius: 15px 15px 0 0;
   margin-bottom: 48px;
+  gap: 12px;
   button {
     text-align: center;
     width: 90%;
     height: 42px;
     border-radius: 5px;
-    background-color: #749EB2;
-    color: #f5f5f5;
-    margin-top: 12px;
+    background-color: #f5f5f5;
+    color: #333333;
+    box-shadow: 2px 3px #33333311;
   }
   .closeOverlay{
     display: flex;

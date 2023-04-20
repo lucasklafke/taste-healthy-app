@@ -10,7 +10,6 @@ export const HeaderContainer = styled.div`
   min-width: 360px;
   height: 60px;
   background: #21BACF;
-
   .contentContainer {
     width: 90%;
     max-width: 1028px;

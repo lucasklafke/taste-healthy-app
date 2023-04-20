@@ -14,8 +14,8 @@ export default function Footer() {
     <>{
       overlayVisible?
         <CreateFoodOverlayContainer>
-          <button>Create Ingredient</button>
           <button>Create Recipe</button>
+          <button>Create Ingredient</button>
           <FooterContainer degrees={degrees}>
             <div className='icon'>
               <IoPersonSharp color='#333333' fontSize={28}/>
