@@ -4,6 +4,8 @@ import FoodContainer from '@/components/foodContainer/FoodContainer'
 import React, { useEffect, useState } from 'react'
 import Select from 'react-select'
 import styles from '@/styles/feed.module.css'
+// import OpenOverlayButton from '@/components/buttons/OpenOverlayButton'
+import Footer from '@/components/footers/feedFooter'
 export default function Feed() {
   useEffect(() => {
     setDocumentVisible(document.body)
@@ -118,6 +120,7 @@ export default function Feed() {
         <FoodContainer />
         <FoodContainer />
       </main>
+      <Footer/>
     </div>
   )
 }

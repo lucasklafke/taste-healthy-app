@@ -40,6 +40,7 @@
   flex-wrap: wrap;
   gap: 32px;
   margin-top: 12px;
+  margin-bottom: 72px;
 }
 
 .select {
