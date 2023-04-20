@@ -48,7 +48,7 @@ export const HeaderContainer = styled.div`
     height: calc(100% - 4px);
     padding: 0 0 0 10px;
     
-    background-color: #749EB2;
+    background-color: #f5f5f5;
     flex: none;
     border: none;
     .input::placeholder {
@@ -57,18 +57,17 @@ export const HeaderContainer = styled.div`
     &:-webkit-autofill,
     &:-webkit-autofill:hover, 
     &:-webkit-autofill:focus {
-      -webkit-box-shadow: 0 0 0 30px #749EB2 inset !important;
-      box-shadow: 0 0 0 30px #749EB2 inset !important;
-      -webkit-text-fill-color: #333 !important;
+      -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+      box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+      -webkit-text-fill-color: #333333 !important;
     }
   }
   .title {
     font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 28px;
     text-align: center;
-    color: #002032;
-    width: 62px;
+    color: #333333;
     /* position: absolute; */
     /* right: 0; */
   }
@@ -80,12 +79,12 @@ export const HeaderContainer = styled.div`
     position: relative;
     align-items: center;
     justify-content: center;
-    background: #749EB2;
+    background: #f5f5f5;
     border-radius: 5px;
     
   }
   .icon {
-    color: #002032;
+    color: #333333;
     width: 36px;
     height: 36px;
   }
@@ -95,6 +94,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     z-index: 5;
+    margin-left: 4px;
   }
 
   .search {

@@ -4,31 +4,44 @@
   max-width: 480px;
   min-width: 350px;
   height: 152px;
-  background-color: #21BACF;
+  background-color: #f5f5f5;
+  border: 1px #3333332a solid;
+  box-shadow: 2px 3px #0000000a;
   border-radius: 5px;
   padding: 8px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
   cursor: pointer;
 }
 
 .titleContainer {
   display: flex;
+  min-width: 100px;
   height: 136px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
+.leftSide {
+  display: flex;
+  min-width: 60%;
+  gap: 8px;
+}
+.rightSide {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+
 .title {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 23px;
   text-align: center;
 
-  color: #002032;
+  color: #333333;
 }
 
 .infoContainer {
@@ -39,15 +52,14 @@
   justify-content: space-evenly;
   gap: 16px;
 }
+
 .infoText {
-  font-family: 'Roboto', sans-serif;
-;
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 9px;
-  line-height: 10px;
+  font-size: 10px;
   text-align: center;
-  color: #002032;
+  color: #333333;
   width: fit-content;
 }
 
@@ -66,6 +78,7 @@
   height: 92px;
   background-color: antiquewhite;
 }
+
 .descriptionContainer {
   display: flex;
   height: 136px;
@@ -77,28 +90,26 @@
 }
 
 .descriptionTitle {
-  font-family: 'Roboto', sans-serif;
-;
+  font-family: 'Lato', sans-serif;
+
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  color: #000000;
+  color: #333333;
 }
 .description {
   min-width: 88px;
   min-height: 60px;
-
-  font-family: 'Roboto', sans-serif;
-;
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 10px;
   text-align: center;
 
-  color: #002032;
+  color: #333333;
 
   flex: none;
   order: 1;
@@ -110,7 +121,7 @@
   position: absolute;
   left: calc(50% - 43px/2 + 0.5px);
   top: 126px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;;
 ;
   font-style: normal;
   font-weight: 400;
@@ -119,5 +130,5 @@
   text-align: center;
   text-decoration-line: underline;
 
-  color: #002032;
+  color: #333333;
 }

@@ -32,8 +32,7 @@
 
   /* titles - 36 */
 
-  font-family: 'Roboto', sans-serif;
-;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -51,7 +50,7 @@
   flex-grow: 0;
 }
 .image {
-  margin-top: 92px;
+  margin-top: 50%;
 }
 .button {
   display: flex;
@@ -75,7 +74,7 @@
   /* 24px */
   color: white;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;;
 ;
   font-style: normal;
   font-weight: 400;
@@ -100,7 +99,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 124px;
+  bottom: 160px;
+  position: absolute;
 }
 
 .subtitle {

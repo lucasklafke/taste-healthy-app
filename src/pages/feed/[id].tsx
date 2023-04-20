@@ -1,4 +1,4 @@
-import Header from '@/components/headers/LoggedHeader'
+import Header from '@/components/headers/Header'
 import styles from '@/styles/feed.module.css'
 import FoodContainer from '@/components/foodContainer/FoodContainer'
 import { useRouter } from 'next/router'
