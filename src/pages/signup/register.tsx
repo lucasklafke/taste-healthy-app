@@ -1,11 +1,11 @@
 import FormularyError from '@/components/errorComponents/formularyError'
-import Header from '@/components/headers/Header'
 import { FormActions, useSignupForm } from '@/contexts/signupContext'
 import styles from '@/styles/signup.module.css'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import { ChangeEvent } from 'react'
 import Input, { Select } from './styles'
+import { FormularyDefaultPage } from '@/themes/pages/FormularyPage/FormularyPage'
 export default function Login() {
   const router = useRouter()
   const {state, dispatch} = useSignupForm()
@@ -50,8 +50,7 @@ export default function Login() {
     }
   }
   return (
-    <div className={styles.page}>
-      <Header />
+    <FormularyDefaultPage>
       <h2 className={styles.title}>Cadastro</h2>
       <div className={styles.separator}></div>
       {state.error? <FormularyError><span>{state.error} não informado</span></FormularyError> : <></>}
@@ -71,6 +70,6 @@ export default function Login() {
         </div>
         <button className={styles.registerButton}>Registrar-se</button>
       </form>
-    </div>
+    </FormularyDefaultPage>
   )
 }

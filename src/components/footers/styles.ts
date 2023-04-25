@@ -4,7 +4,7 @@ interface props {
 }
 export const FooterContainer = styled.div<props>`
   position: fixed;
-  height: 48px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,7 +12,7 @@ export const FooterContainer = styled.div<props>`
   bottom: 0;
   width: 100%;
   z-index: 10;
-
+  padding-bottom: 4px;
   .icon{
     display: flex;
     align-items: center;

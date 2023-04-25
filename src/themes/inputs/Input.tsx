@@ -3,13 +3,15 @@ import styled from 'styled-components'
 //   border: string;
 // }
 export const Input = styled.input`
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px 12px;
   gap: 16px;
 
-  width: 320px;
+  width: 100%;
+  min-width: 280px;
   height: 56px;
   border: none;
   background: #E8F0FE;

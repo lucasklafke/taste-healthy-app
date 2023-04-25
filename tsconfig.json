@@ -25,6 +25,6 @@
     "src/pages/home.jsx",
     "src/pages/index.jsx",
     "src/pages/login/index.jsx"
-  ],
+],
   "exclude": ["node_modules"]
 }

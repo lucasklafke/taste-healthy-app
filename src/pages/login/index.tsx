@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import Header from '@/components/headers/Header'
 import LoginImage from '@/assets/images/LoginImage.png'
 import styles from '@/styles/login.module.css'
 import { useState } from 'react'
-import { Input } from '@/components/inputs/Input'
+import { Input } from '@/themes/inputs/Input'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import FormularyError from '@/components/errorComponents/formularyError'
+import { FormularyDefaultPage } from '@/themes/pages/FormularyPage/FormularyPage'
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -40,8 +40,7 @@ export default function Login() {
 
   }
   return (
-    <div className={styles.loginPage}>
-      <Header />
+    <FormularyDefaultPage>
       <Image src={LoginImage} alt="" className={styles.image} />
 
       <div className={styles.inputContainer}>
@@ -79,6 +78,6 @@ export default function Login() {
           </div>
         </form>
       </div>
-    </div>
+    </FormularyDefaultPage>
   )
 }

@@ -1,10 +1,10 @@
 import FormularyError from '@/components/errorComponents/formularyError'
-import Header from '@/components/headers/Header'
 import Input from './styles'
 import styles from '@/styles/signup.module.css'
 import { useRouter } from 'next/router'
 import { ChangeEvent } from 'react'
 import { useSignupForm, FormActions } from '@/contexts/signupContext'
+import { FormularyDefaultPage } from '@/themes/pages/FormularyPage/FormularyPage'
 
 export default function Login() {
   const router = useRouter()
@@ -49,8 +49,7 @@ export default function Login() {
     }
   }
   return (
-    <div className={styles.page}>
-      <Header />
+    <FormularyDefaultPage>
       <h2 className={styles.title}>Cadastro</h2>
       <div className={styles.separator}></div>
       {state.error? <FormularyError><span>{state.error} não informado</span></FormularyError> : <></>}
@@ -92,6 +91,6 @@ export default function Login() {
         </div>
         <button className={styles.nextButton}>Avançar</button>
       </form>
-    </div>
+    </FormularyDefaultPage>
   )
 }
