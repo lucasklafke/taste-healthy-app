@@ -5,7 +5,7 @@ import styles from '@/styles/feed.module.css'
 // import OpenOverlayButton from '@/components/buttons/OpenOverlayButton'
 import axios, { AxiosResponse } from 'axios'
 import DefaultPage from '@/themes/pages/DefaultPage/DefaultPage'
-import { FeedSelect } from '@/components/select/FeedSelect'
+import { FeedSelect } from '@/components/select/feedSelect/FeedSelect'
 interface dish {
   name: string
   description: string,
