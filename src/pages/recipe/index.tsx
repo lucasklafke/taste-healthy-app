@@ -5,7 +5,7 @@ import DefaultPage from '@/themes/pages/DefaultPage/DefaultPage'
 import NextButton from '@/themes/buttons/NextButton'
 import { ThemeProvider } from 'styled-components'
 import theme from '@/themes/ApplicationTheme'
-import CreateRecipeContainer from './styles'
+import CreateRecipeContainer from '@/styles/recipe'
 import { useRouter } from 'next/router'
 export default function CreateRecipe() {
   const router = useRouter()

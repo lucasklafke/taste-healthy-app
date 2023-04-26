@@ -1,4 +1,4 @@
-import { Theme } from '@/themes/ApplicationTheme'
+import { Theme } from '../themes/ApplicationTheme'
 import styled from 'styled-components'
 
 const CreateRecipeContainer = styled.div<{theme:Theme}>`
