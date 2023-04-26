@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import DefaultPage from '@/themes/pages/DefaultPage/DefaultPage'
 import { ThemeProvider } from 'styled-components'
 import theme from '@/themes/ApplicationTheme'
-import  CreateRecipeContainer from '../styles'
+import CreateRecipeContainer from '../styles'
 import { Separator } from '@/themes/separator/separator'
 import { useRouter } from 'next/router'
 import NextButton from '@/themes/buttons/NextButton'
 import axios from 'axios'
 import { IngredientSelect } from '@/components/select/ingredientSelect/IngredientSelect'
 import {IoClose} from 'react-icons/io5'
-// import { IngredientSelect } from '@/components/select/ingredientSelect/IngredientSelect'
 interface Ingredient {
   id: 2,
   group_id: 1,
