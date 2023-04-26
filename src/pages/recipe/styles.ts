@@ -1,7 +1,7 @@
 import { Theme } from '@/themes/ApplicationTheme'
 import styled from 'styled-components'
 
-export const CreateRecipeContainer = styled.div<{theme:Theme}>`
+const CreateRecipeContainer = styled.div<{theme:Theme}>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,3 +117,4 @@ export const CreateRecipeContainer = styled.div<{theme:Theme}>`
     bottom:152px;
   }
 `
+export default CreateRecipeContainer
